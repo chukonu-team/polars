@@ -1,0 +1,17 @@
+[package]
+name = "polars_c"
+version = { workspace = true }
+authors = { workspace = true }
+edition = { workspace = true }
+homepage = { workspace = true }
+
+[dev-dependencies]
+cbindgen = "0.26"
+
+[dependencies]
+polars = { workspace = true, features = ["fmt"] }
+polars-io = { workspace = true, features = ["cloud", "parquet"] }
+paste = "1.0.14"
+
+[lib]
+crate-type = ["cdylib"]
